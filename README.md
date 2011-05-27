@@ -1,6 +1,6 @@
-= ddns_agent
+= mmm_ddns_agent
 
-ddns_agentは、 MySQL Master Master Replication cluster toolとmmm_ns_agentをDynamicDNS環境で使用するためのツールです。
+mmm_ddns_agentは、 MySQL Master Master Replication cluster toolとmmm_ns_agentをDynamicDNS環境で使用するためのツールです。
 (Amazon EC2環境のようなIPアドレスを制御できないばあいは特に)
 
 NsupdateのようなツールでDNS recordを更新可能なBINDのようなDNSサーバを構築している場合に使用可能です。
@@ -28,11 +28,11 @@ NsupdateのようなツールでDNS recordを更新可能なBINDのようなDNS�
 1.任意の場所にcheckoutする
 
     $ cd ~/utils
-    $ git clone git://github.com/roothybrid7/ddns_agent.git
+    $ git clone git://github.com/roothybrid7/mmm_ddns_agent.git
 
 2.サンプルの設定ファイルをコピーして環境にあうように編集
 
-    $ cd ddns_agent
+    $ cd mmm_ddns_agent
     $ cp mmm_ddns_agent.conf.sample mmm_ddns_agent.conf
     $ vim mmm_ddns_agent.conf
     # mmm_ns_agent.conf
