@@ -4,7 +4,10 @@ require_once 'MMMConfiguration.class.php';
 require_once 'Net/DNS2.php';
 
 $config_manager = MMMConfiguration::getInstance();
-$config_manager->load('mmm_ddns_agent.conf');
+if (!$config_manager->load('mmm_ddns_agent.conf')) {
+    echo 'Invalid configuration for mmm_ddns_agent';
+    exit(1);
+}
 
 // a forking agent to listen for commands to pass to nameserver
 // to be used with MMM
