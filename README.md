@@ -19,9 +19,11 @@ NsupdateのようなツールでDNS recordを更新可能なBINDのようなDNS�
 * DynamicDNSの設定
 * php, php extensionのインストール
 
+
     $ sudo yum install php php-paer.noarch
     $ pear list-upgrades
     $ pear install Net_DNS2
+
 
 == 使い方
 
