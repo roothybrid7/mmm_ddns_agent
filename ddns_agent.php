@@ -16,7 +16,7 @@ $sock = socket_create_listen($config_manager->item('port'));
 # loop
 if ($sock)
 {
-    print("Daemon started, listening on $port\n");
+    print("Daemon started, listening on ".$config_manager->item('port')."\n");
 
     while ($new_socket = socket_accept($sock))
     {
