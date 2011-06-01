@@ -1,0 +1,9 @@
+[nameserver_agent]
+port = 9994
+dns_server = 10.1.2.3
+dns_port = 53
+ttl = 10
+type = CNAME
+zone = nsupdate.example.com
+tsig_key_name = nsupdate.example.com.
+tsig_key_value = "jkldfajflkJKLJ+ClK7Ol8wWSDo6AkeR6kBPSBpKyA2ODpcye7vryKzIMqBjELzWJACyfgs+b7qUnA=="
