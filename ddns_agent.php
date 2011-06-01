@@ -123,7 +123,7 @@ function BuildUpdater()
 }
 
 function SendUpdate($updater) {
-    SignedPacketByTSIG($upater);
+    SignedPacketByTSIG($updater);
 
     try {
         $updater->update();
