@@ -86,7 +86,7 @@ function AddHostAndIpToDnsServer($hostname,$ip)
 {
     $config_manager = MMMConfiguration::getInstance();
 
-    $updater = BuildUpdater('register');
+    $updater = BuildUpdater();
     $ttl = $config_manager->item('ttl');
     $type = $config_manager->item('type');
 
@@ -101,7 +101,7 @@ function RemoveHostFromDnsServer($hostname)
 {
     $config_manager = MMMConfiguration::getInstance();
 
-    $updater = BuildUpdater('remove');
+    $updater = BuildUpdater();
     $type = $config_manager->item('type');
 
     print("Executing: nsupdate delete '$hostname $type'\n");
@@ -110,7 +110,7 @@ function RemoveHostFromDnsServer($hostname)
     return Sendupdate($updater);
 }
 
-function BuildUpdater($action='remove')
+function BuildUpdater()
 {
     $config_manager = MMMConfiguration::getInstance();
 
