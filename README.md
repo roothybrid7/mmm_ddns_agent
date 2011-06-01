@@ -41,7 +41,7 @@ NsupdateのようなツールでDNS recordを更新可能なBINDのようなDNS�
     dns_server = 10.1.2.3                   # DynamicDNSサーバ(Bindなど)
     dns_port = 53                           # DynamicDNSのポート
     ttl = 10                                # 登録するMySQL MasterレコードのTTLを指定(短めに)
-    type = CNAME                            # DNSレコードの種別(CNAMEかAレコードか)
+    type = A                                # DNSレコードの種別(今のところAレコードのみ:監視しているMySQLのInterfaceのIPaddress)
     zone = nsupdate.example.com             # MySQLサーバの所属ゾーンを指定(Domain名)
     # TSIGkey認証の場合はキー名とキーの内容を記述
     tsig_key_name = nsupdate.example.com.

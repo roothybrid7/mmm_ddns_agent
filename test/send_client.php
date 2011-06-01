@@ -3,8 +3,8 @@
 define('BASE_PATH', implode(array_slice(explode(DIRECTORY_SEPARATOR, __FILE__), 0, -2), DIRECTORY_SEPARATOR));
 require_once BASE_PATH . DIRECTORY_SEPARATOR . 'MMMConfiguration.class.php';
 
-$delete_record = "CLEARIP:db-writer1.nsupdate.example.com:db-001.nsupdate.example.com\n";
-$register_record = "ADDIP:db-writer1.nsupdate.example.com:db-001.nsupdate.example.com\n";
+$delete_record = "CLEARIP:db-writer1.nsupdate.example.com:1.2.3.4\n";
+$register_record = "ADDIP:db-writer1.nsupdate.example.com:1.2.3.4\n";
 $config_manager = MMMConfiguration::getInstance();
 if (!$config_manager->load(BASE_PATH . DIRECTORY_SEPARATOR . 'mmm_ddns_agent.conf')) {
     echo 'Invalid configuration for mmm_ddns_agent';
