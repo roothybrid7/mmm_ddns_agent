@@ -3,7 +3,7 @@
 define('BASE_PATH', dirname(__FILE__));
 
 require_once BASE_PATH . DIRECTORY_SEPARATOR . 'MMMConfiguration.class.php';
-require_once BASE_PATH . DIRECTORY_SEPARATOR .  'Net/DNS2.php';
+require_once 'Net/DNS2.php';
 
 $config_manager = MMMConfiguration::getInstance();
 if (!$config_manager->load(BASE_PATH . DIRECTORY_SEPARATOR . 'mmm_ddns_agent.conf')) {
