@@ -1,10 +1,12 @@
 <?php
 
-require_once 'MMMConfiguration.class.php';
-require_once 'Net/DNS2.php';
+define('BASE_PATH', dirname(__FILE__));
+
+require_once BASE_PATH . DIRECTORY_SEPARATOR . 'MMMConfiguration.class.php';
+require_once BASE_PATH . DIRECTORY_SEPARATOR .  'Net/DNS2.php';
 
 $config_manager = MMMConfiguration::getInstance();
-if (!$config_manager->load('mmm_ddns_agent.conf')) {
+if (!$config_manager->load(BASE_PATH . DIRECTORY_SEPARATOR . 'mmm_ddns_agent.conf')) {
     echo 'Invalid configuration for mmm_ddns_agent';
     exit(1);
 }
